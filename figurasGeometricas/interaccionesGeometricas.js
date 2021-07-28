@@ -1,38 +1,3 @@
-// codigo cuadrado
-function perimetroCuadrado(lado){
-    return lado * 4;
-};
-
-function areaCuadrado(lado){
-    return lado * lado;
-};
-
-// codigo triangulo
-function perimetroTriangulo(lado1,lado2,base) {
-    return parseInt(lado1) + parseInt(lado2) + parseInt(base);
-};
-
-
-function areaTriangulo(base,altura){
-    return (base * altura) / 2;
-} 
-
-// Código del círculo
-
-function diametroCirculo(radio) {
-    return radio * 2;
-}
-
-const PI = Math.PI;
-
-function perimetroCirculo(radio) { 
-    let diametro = diametroCirculo(radio);
-    return diametro * PI;
-}
-
-function areaCirculo(radio){
-    return (radio * radio) * PI;
-};
 
 // interactuar con HTML
 
@@ -73,6 +38,21 @@ function calcularAreaTriangulo(){
     const valueTB = inputTB.value;
     const area = areaTriangulo(valueTB,valueTA);
     alert(area);
+}
+
+function calcularAlturaTrianguloIsoceles(){
+    const inputT1 = document.getElementById("inputTriangulo1");
+    const inputT2 = document.getElementById("inputTriangulo2");
+    const inputTB = document.getElementById("inputTrianguloB");
+    const valueT1 = inputT1.value;
+    const valueT2 = inputT2.value;
+    const valueTB = inputTB.value;
+    if (valueT1 === valueT2){
+        let resultado = alturaTrianguloIsoceles(valueT1,valueTB);
+        alert(resultado)
+    } else {
+        alert("Los lados deben ser iguales para calcular un triángulo isoceles.");
+    }
 }
 
 // circulo
