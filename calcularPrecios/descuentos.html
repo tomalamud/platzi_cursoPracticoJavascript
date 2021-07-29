@@ -10,18 +10,40 @@
 <body>
     <header>
         <h1>Porcentajes y descuentos</h1>
-        <p>Este es el segundo taller del curso práctico de JavaScript</p>
+        <div>
+            <input type="text" placeholder="Search">
+            <button>Q</button>
+            <div>
+                <a href="" class="carrito">C</a>
+            </div>
+        </div>
     </header>
     <section>   
-        <h2>Calcula el precio de los productos con descuento</h2>
+        <div>
+            <form class="form__mail">
+                <div class="top_div">
+                    <label for="InputMail">Dejanos tu mail y gana un cupón del 15% además del descuento del día</label>
+                        <input id="InputMail" type="text">
+                </div>
+                <div>
+                    <!-- <label for="InputCheck">Check this box to allow the privacy politics</label>    
+                        <input id="InputCheck" type="checkbox"> -->
+                        <button onclick="buttonSolicitarCupon()">Send</button>
+                        <p id="mailResult"></p>
+                </div>    
+            </form>
+        </div>
         <div class="form__container">
             <form>
                 <label for="InputPrice">Escribe el precio del producto</label>
                     <input id="InputPrice" type="number">
                 <label for="InputDicount">Escribe el porcentaje de descuento</label>
                     <input id="InputDiscount" type="number">
-                <button type="button" onclick="buttonPriceDiscount()">Calcular</button>
-
+                <label for="InputCupon">Cupón:</label>
+                <div class="cajitaCupon">
+                        <input id="InputCupon" type="number">
+                    <button type="button" onclick="buttonPriceDiscount(),buttonValidateCupon()">Calcular descuento</button>
+                </div>
                 <p id="priceResult"></p>
             </form>
         </div>        
