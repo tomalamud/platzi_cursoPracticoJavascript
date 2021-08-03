@@ -98,4 +98,25 @@ const lista2Array = Object.entries(lista2Count).sort(
 //         if (a[1] > b[1]) return -1;
 //     }
 // );
-let moda = lista2Array[lista2Array.length - 1];
+let moda = lista2Array[lista2Array.length - 1]; // el menos uno es porque el indice del array empieza a contar desde el cero y el length no.
+
+// Ejemplo compa.
+// function mode(arr){
+//     return arr.sort((a,b) =>
+//           arr.filter(v => v===a).length
+//         - arr.filter(v => v===b).length
+//     ).pop();
+// }
+// console.log(mode(lista2Array));
+
+// Promedio ponderado. (incompleto)
+// const notas = [10,5,8,9,7,5,9];
+// const credits = [200,300,200,500,2000,200,400];
+
+// function promedioPonderado(){
+//     for (let i = 0; i < notas.length; i++){
+//         let result = [];
+//         (notas[i] * credits[i])
+
+//     }
+// }
